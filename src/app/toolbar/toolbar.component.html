@@ -1,0 +1,25 @@
+<mat-toolbar class="bg-info">
+
+    <span class="logo-spacer"></span>
+
+    <button mat-icon-button class="bg-info" [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Excuses App</span>
+    <span class="example-spacer"></span>
+
+    
+    <mat-menu #menu="matMenu" class="bg-light">
+
+        <a mat-menu-item class="text-dark" [routerLink]="['/my-excuses']" queryParamsHandling="merge">
+            My Excuses
+        </a>
+        <a mat-menu-item class="text-dark" [routerLink]="['/excuses']" queryParamsHandling="merge">
+            Generate Excuses
+        </a>
+        <a mat-menu-item class="text-dark" [routerLink]="['/']" queryParamsHandling="merge">
+            Logout
+        </a>
+    </mat-menu>
+
+</mat-toolbar>

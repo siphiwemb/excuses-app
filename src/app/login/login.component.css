@@ -1,0 +1,77 @@
+a {color: blue; text-decoration: underline;}
+
+/* For 480 Resolution */  
+@media only screen   
+and (min-device-width : 320px)   
+and (max-device-width : 480px){
+    .view {
+        padding-top: 15%;
+    }
+}  
+
+
+/* For 640 Resolution */  
+@media only screen   
+and (min-device-width : 360px)   
+and (max-device-width : 640px)  
+{ 
+    .view {
+        padding-top: 15%;
+    }
+}
+
+/* For 1024 Resolution */  
+@media only screen   
+and (min-device-width : 768px)   
+and (max-device-width : 1024px)  
+{
+    .view {
+        padding-top: 20%;
+    }
+}
+
+/* For 1366 Resolution */  
+@media only screen   
+and (min-width: 1030px)   
+and (max-width: 1366px)  
+{
+    .view {
+        padding-top: 20%;
+    }
+}
+
+@media only screen   
+and (min-width: 1370px)  
+and (max-width: 2400px)  
+{
+    .view {
+        padding-top: 10%;
+    }
+    .liner{
+        display: block !important;
+    }
+}
+
+@media only screen   
+and (orientation : landscape)   
+and (-webkit-min-device-pixel-ratio: 1)  
+and (min-device-width : 768px)   
+and (max-device-width : 1007px)   
+{
+    .view {
+        padding-top: 20%;
+    }
+}
+
+
+/* Orientation : Portrait */  
+@media only screen   
+and (orientation : portrait)   
+and (-webkit-min-device-pixel-ratio: 1)   
+and (min-device-width : 768px)   
+and (max-device-width : 1007px)  
+{ 
+    .view {
+        padding-top: 20%;
+    }
+}  

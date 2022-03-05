@@ -1,0 +1,12 @@
+table {
+    width: 100%;
+  }
+
+td, th {
+    justify-content: center;
+    max-width: 70px;
+}
+
+.stat-top-pad{
+    padding-top: 10px;
+}

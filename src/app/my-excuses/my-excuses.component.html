@@ -1,0 +1,68 @@
+<app-toolbar></app-toolbar>
+<br/>
+
+<div class="container">
+    <div class="text-center">
+        <div class="h1">
+            My Excuses
+        </div>
+
+        <a class="text-dark" [routerLink]="['/excuses']" queryParamsHandling="merge">
+            > Generate Excuses
+        </a>
+    </div>
+    <br/>
+
+    <div class="row text-center">
+        <div *ngFor="let item of stats" class="col-3">
+            <div class="border rounded shadow stat-top-pad">
+                <div class="h5">
+                    {{item.excuse_category}}
+                </div>
+                <div class="h1">
+                    {{item.excuse_id__count}}
+                </div>
+            </div>
+            <br/>
+        </div>
+    </div>
+
+
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
+      
+          <!-- Date Column -->
+          <ng-container matColumnDef="date_created">
+            <th mat-header-cell *matHeaderCellDef> Date </th>
+            <td mat-cell *matCellDef="let element"> {{element.date_created}} </td>
+          </ng-container>
+      
+          <!-- Time Column -->
+          <ng-container matColumnDef="time_created">
+            <th mat-header-cell *matHeaderCellDef> Time </th>
+            <td mat-cell *matCellDef="let element"> {{element.time_created}} </td>
+          </ng-container>
+      
+          <!-- Category Column -->
+          <ng-container matColumnDef="excuse_category">
+            <th mat-header-cell *matHeaderCellDef> Category </th>
+            <td mat-cell *matCellDef="let element"> {{element.excuse_category}} </td>
+          </ng-container>
+      
+          <!-- Excuse Column -->
+          <ng-container matColumnDef="excuse">
+            <th mat-header-cell *matHeaderCellDef> Excuse </th>
+            <td mat-cell *matCellDef="let element"> {{element.excuse}} </td>
+          </ng-container>
+      
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      
+        <mat-paginator [pageSizeOptions]="[10, 20]"
+                       showFirstLastButtons 
+                       aria-label="Select page of excuses">
+        </mat-paginator>
+      </div>
+</div>
+<br/>

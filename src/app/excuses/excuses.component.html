@@ -1,0 +1,30 @@
+<app-toolbar></app-toolbar>
+<div class="container text-center">
+    <br/>
+
+    <div class="row">
+        <div class="col-6">
+            <mat-form-field class="example-full-width bg-dark" appearance="fill">
+                <mat-label>No. of excuses</mat-label>
+                <input matInput placeholder="No. of excuses" [(ngModel)]="excuseNo">
+            </mat-form-field>
+        </div>
+
+        <div class="col-6">
+            <mat-form-field appearance="fill" class="w-100 bg-dark">
+                <mat-label>Category</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let obj of categories" (click)="clickCategory($event)" id="{{ obj }}" value="obj">{{obj}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <br/>
+
+    <div class="border text-left" style="width: 100%; height: 450px;">
+        <br/>
+        <ul *ngFor="let item of excuses">
+            <li>{{ item.excuse }}</li>
+        </ul>
+    </div>
+</div>
